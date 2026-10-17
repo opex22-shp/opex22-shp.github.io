@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Îlots de chaleur à Ziguinchor | Almamy Sagna</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+    h1 { color: #1a5276; }
+    .bouton { display: inline-block; background: #1a5276; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">← Retour à l'accueil</a></p>
+
+  <h1>Application web de gestion des îlots de chaleur à Ziguinchor</h1>
+
+  <h2>Contexte</h2>
+  <p>À Ziguinchor, l’urbanisation progressive remplace la végétation par des surfaces bâties et imperméables, ce qui accentue la chaleur de surface dans certains quartiers. C'est en effectuant une carte d'îlots de chaleur lors de mon mémoire qui porte sur la vulnérabilité et la résilience du système de santé face aux effets du changement climatique dans la commune, que j'ai remarqué que la ville s'est réchauffée entre 1995 et 2025. En analysant l'évolution de la température durant cette période (1995-2025), on a observé une augmentation de +0,03°C par an. Si cette tendance se maintient, les températures moyennes annuelles devraient continuer à augmenter, passant d’environ 28,82°C en 2025 à environ 28,98°C en 2030. Nos enquêtes menées au niveau de 7 structures sanitaires et de cinq quartiers nous ont permis d'évaluer les conséquences sur la santé des populations (déshydratation, hypertension artérielle, stress thermique).
+Les collectivités ne disposent pas, à notre connaissance, d’un outil local qui indique où la chaleur est la plus forte, pourquoi, qui y est exposé et où intervenir en premier. Faute de cette information, les actions de lutte contre les vagues de chaleurs risquent d’être dispersées ou mal ciblées, alors que les moyens sont limités.
+  </p>
+
+  <h2>Données utilisées</h2>
+  <p>Images satellites (Landsat, Sentinelle 2, Worldpop), ANAT, OpenStreetMap.</p>
+
+  <h2>Méthode et outils</h2>
+  <p>Traitement sous Google Earth Engine.
+    Prétraitement : masquage des nuages et de l’eau, composites médians de mars à mai 2023-2026 (saison chaude, peu nuageuse).
+Indicateurs : température de surface (Landsat 8/9, °C) et anomalie thermique par rapport à la moyenne de la zone ; NDVI (Sentinel-2) pour la végétation ; part de surfaces bâties (ESA WorldCover).
+Agrégation sur une grille de 200 m, adaptée à la résolution thermique de Landsat (100 m). Chaque maille reçoit la population estimée (WorldPop) et le nombre d’écoles, de marchés et de structures de santé (comptées double).
+Score de priorité de 0 à 100 : chaleur, faible végétation, imperméabilisation et exposition sont normalisés puis combinés par analyse multicritère à poids égaux, et classés en 4 niveaux. Sans apprentissage automatique : méthode transparente et reproductible.
+Interventions suggérées par des règles simples : végétalisation, désimperméabilisation ou revêtements réfléchissants, ombragé près des équipements.
+Validation : corrélation NDVI/température, puis détection de changements 2014-2016 / 2024-2026 pour vérifier si la chaleur augmente là où la végétation recule.
+  </p>
+
+  <h2>Résultat</h2>
+  <p>Mesurer la chaleur de surface : le canal thermique de Landsat 8/9 donne une température de surface sur toute la zone d’étude, ce qui permet de repérer les zones les plus chaudes (« où ? »).
+Expliquer cette chaleur : Sentinel-2 (10 m) mesure la végétation (NDVI) et, avec ESA WorldCover, la part de surfaces bâties. On voit ainsi si une zone est chaude par manque de végétation ou par forte imperméabilisation (« pourquoi ? »).
+Identifier qui est exposé : ces cartes sont croisées avec la population (WorldPop) et la localisation des écoles, des marchés et structures de santé (« qui est exposé ? »).
+Suivre dans le temps : les archives Landsat permettent de comparer la situation passée et actuelle, et de mesurer plus tard l’effet des aménagements.
+Ces données sont gratuites et mises à jour régulièrement, donc la méthode peut être reproduite dans d’autres villes sénégalaises sans nouvelle campagne de mesure..
+  </p>
+
+  <p><a class="bouton" href="LIEN-DE-VOTRE-APPLICATION">Ouvrir l'application</a></p>
+</body>
+</html>
