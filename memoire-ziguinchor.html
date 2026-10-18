@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mémoire de master, Ziguinchor | Almamy Sagna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --fond: #F3F6F4;
+      --encre: #12343B;
+      --texte: #2B3F44;
+      --mangrove: #2D6A4F;
+      --chaleur: #C8372D;
+      --filet: #CBD8D3;
+      --titre: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+      --corps: "Figtree", "Segoe UI", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--fond);
+      color: var(--texte);
+      font-family: var(--corps);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+    body::before {
+      content: "";
+      display: block;
+      height: 6px;
+      background: linear-gradient(90deg, #2B6CB0, #2D9C8A, #F2C94C, #E8833A, #C8372D);
+    }
+    a { color: var(--mangrove); }
+    a:focus-visible { outline: 3px solid var(--chaleur); outline-offset: 3px; }
+    .conteneur { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+    .retour { display: inline-block; margin: 28px 0 0; }
+    h1 {
+      font-family: var(--titre);
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--encre);
+      margin: 24px 0 12px;
+      max-width: 20em;
+    }
+    .sous-titre {
+      font-family: var(--titre);
+      font-weight: 500;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--mangrove);
+      margin: 0 0 32px;
+    }
+    section { padding: 32px 0; border-top: 1px solid var(--filet); }
+    h2 {
+      font-family: var(--titre);
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--encre);
+      margin: 0 0 16px;
+    }
+    p { max-width: 42em; margin: 0 0 14px; }
+
+    /* Galerie de cartes */
+    .galerie {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 32px 24px;
+    }
+    figure { margin: 0; }
+    figure a { display: block; border: 1px solid var(--filet); background: #fff; }
+    figure a:hover { border-color: var(--chaleur); }
+    figure img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    figcaption { margin-top: 10px; font-size: 0.95rem; }
+    figcaption strong { display: block; font-family: var(--titre); font-weight: 500; font-size: 1.05rem; color: var(--encre); }
+    .note { font-size: 0.95rem; }
+    footer { padding: 32px 0 48px; border-top: 1px solid var(--filet); }
+  </style>
+</head>
+<body>
+  <main class="conteneur">
+
+    <a class="retour" href="index.html">← Retour à l'accueil</a>
+
+    <h1>Vulnérabilité au changement climatique et résilience du système de santé à Ziguinchor</h1>
+    <p class="sous-titre">Mémoire de Master en Géographie, UCAD. Cartes utilisées dans le mémoire</p>
+
+    <section>
+      <h2>Le mémoire</h2>
+      <p>Ce travail étudie la vulnérabilité au changement climatique et la résilience du système de santé à Ziguinchor, dans le cadre du Master en Géographie (spécialité Environnement, Territoire, Population et Santé).</p>
+      <p>Il comprend une analyse spatiale de l'évolution de l'occupation du sol en 2005, 2015 et 2025, réalisée à partir d'images Landsat et de classifications supervisées.</p>
+    </section>
+
+    <section>
+      <h2>Cartes</h2>
+      <p class="note">Cliquez sur une carte pour l'ouvrir en grand dans un nouvel onglet.</p>
+      <div class="galerie">
+
+        <figure>
+          <a href="ODS_ZIG_2005.jpg" target="_blank" rel="noopener">
+            <img src="ODS_ZIG_2005.jpg" alt="Carte de l'occupation du sol à Ziguinchor en 2005" loading="lazy">
+          </a>
+          <figcaption><strong>Occupation du sol en 2005</strong>Classification supervisée d'images Landsat 8/9.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="ODS_ZIG_2015.jpg" target="_blank" rel="noopener">
+            <img src="ODS_ZIG_2015.jpg" alt="Carte de l'occupation du sol à Ziguinchor en 2015" loading="lazy">
+          </a>
+          <figcaption><strong>Occupation du sol en 2015</strong>Classification supervisée d'images Landsat 8/9.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="OCC_SOL_ZIG_2025_Comp.jpg" target="_blank" rel="noopener">
+            <img src="OCC_SOL_ZIG_2025_Comp.jpg" alt="Carte de l'occupation du sol à Ziguinchor en 2025" loading="lazy">
+          </a>
+          <figcaption><strong>Occupation du sol en 2025</strong>Classification supervisée d'images Landsat.</figcaption>
+        </figure>
+
+        <figure>
+          <a href="ILC_ZIG.jpg" target="_blank" rel="noopener">
+            <img src="ILC_ZIG.jpg" alt="Carte des ilots de chaleur de la commune en 2026" loading="lazy">
+          </a>
+          <figcaption><strong>Carte ilots de chaleeur</strong>Carte réalisée avec les données satellitaires de Copernicus.</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="conteneur"><a href="index.html">← Retour à l'accueil</a></div>
+  </footer>
+</body>
+</html>
